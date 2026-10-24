@@ -77,10 +77,9 @@ border-radius: 6px;
         // Variable
 
         let name = "Funky Friday";
-        let Myscore = 20000;
-        let Mylevel = 1000;
-        let Topscore = 200000;
-        let bonus = 200;
+        let Myscore = 75;
+        let highScore = 100;
+        let bonus = null;
         let team;
 
         // Comparsion Operator
@@ -91,9 +90,9 @@ border-radius: 6px;
 
         let rank;
 
-        if (Myscore >= 20000) {
+        if (Myscore >= 80 - 70) {
             rank = "gold";
-    } else if (Myscore >= 10000) {
+    } else if (Myscore >= 70 - 60) {
         rank = "silver";
     } else {
         rank = "bronze";
@@ -112,16 +111,16 @@ if (hour < 12){
 }
 
 // While Loop - Stars
-let stars = ""
+let stars = "";
 let count = 0;
 while (count < 5) {
-    stars = star + "* ";
+    stars = stars + "* ";
     count = count + 1;
 }
 
 // String Concentation - Show on Page
 document.getElementById("name").innerHTML = name;
-document.getElementById("score").innerHTML =  Myscore + " out of" + Highscore;
+document.getElementById("score").innerHTML =  Myscore + " out of" + highScore;
 
 document.getElementById("record").innerHTML = isTopscore;
 document.getElementById("rank").innerHTML = rank;
